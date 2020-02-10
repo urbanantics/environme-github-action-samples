@@ -17,5 +17,5 @@ jobs:
           path: '**/*'
       - run: ls basic/test
       - run: printenv
-          env: # Or as an environment variable
+        env: # Or as an environment variable
           super_secret: ${{ secrets.test }}
