@@ -14,9 +14,11 @@ jobs:
       - name: Environ Me action step
         id: EnvironMe
         uses: urbanantics/environme-github-action@v0.0.0
+        env:
+          my_test: ${{ secrets.test }}
         with:
           path: '**/*'
       - run: ls basic/test
       - run: printenv
-        env: # Or as an environment variable
-          super_secret: ${{ secrets.test }}
+        env:
+          my_test: ${{ secrets.test }}
