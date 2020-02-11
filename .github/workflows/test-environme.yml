@@ -18,9 +18,9 @@ jobs:
         with:
           path: '**/*'
           branchMapping:
-            DEV: "develop"
-            TEST: "feature/"
-            PROD: "release/"
+            - DEV: "develop"
+            - TEST: "feature/"
+            - PROD: "release/"
       - run: ls basic/test
       - run: printenv
         env:
