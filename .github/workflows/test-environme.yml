@@ -18,6 +18,7 @@ jobs:
         with:
           path: '**/*'
           branchMapping: "develop=DEV,feature/=TEST,release/=PROD"
+          outputVariables: 'true'
       - run: ls basic/test
       - run: printenv
         env:
