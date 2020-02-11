@@ -17,7 +17,7 @@ jobs:
           my_test: ${{ secrets.test }}
         with:
           path: '**/*'
-          branchMapping: "develop=DEV,feature/=TEST,release/=PROD"
+          branchMapping: "develop=DEV,feature/=TEST,release/=PROD,master=PROD"
           outputVariables: true
       - run: ls basic/test
       - run: printenv
